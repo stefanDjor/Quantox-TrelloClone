@@ -141,15 +141,6 @@ html, body {
     font-weight: 700;
     cursor: pointer;
 }
-<<<<<<< HEAD
-=======
-.save{
-    visibility: hidden;
-}
-.close {
-    visibility: hidden;
-}
->>>>>>> 6ba513174807c20de5768e447c8a6a93befa0ed5
 .save-btn{
     border: none;
     outline: none;
