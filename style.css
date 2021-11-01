@@ -141,9 +141,6 @@ html, body {
     font-weight: 700;
     cursor: pointer;
 }
-.save{
-
-}
 .save-btn{
     border: none;
     outline: none;
@@ -156,7 +153,19 @@ html, body {
     font-family: 'IBM Plex Sans', sans-serif;
     cursor: pointer;
     letter-spacing: 1px;
+    display: none;
 }
 .save-btn:hover{
     background-color: rgb(62, 62, 204);
+}
+.text-area{
+    width: 100%;
+}
+.input-area{
+    width: 100%;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    display: none;
 }
