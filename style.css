@@ -157,3 +157,6 @@ html, body {
     cursor: pointer;
     letter-spacing: 1px;
 }
+.save-btn:hover{
+    background-color: rgb(62, 62, 204);
+}
