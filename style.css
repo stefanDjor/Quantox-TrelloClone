@@ -128,7 +128,32 @@ html, body {
 .three{
     background-color: darkseagreen;
 }
+.icon-save{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .icon {
     font-size: 18px;
     font-weight: 700;
+    cursor: pointer;
+}
+.save{
+
+}
+.save-btn{
+    border: none;
+    outline: none;
+    background-color: rgb(42, 42, 168);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    cursor: pointer;
+    letter-spacing: 1px;
 }
