@@ -142,7 +142,10 @@ html, body {
     cursor: pointer;
 }
 .save{
-
+    visibility: hidden;
+}
+.close {
+    visibility: hidden;
 }
 .save-btn{
     border: none;
