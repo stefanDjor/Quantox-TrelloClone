@@ -104,6 +104,7 @@ html, body {
     align-items: center;
     gap: 15px;
     width: 85%;
+    padding-bottom: 100px;
 }
 .item{
     background-color: black;
@@ -144,7 +145,7 @@ html, body {
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    padding-top: 40px;
+    
 }
 .save-btn{
     border: none;
