@@ -28,48 +28,42 @@ saveBtn.addEventListener('click', () =>{
 
 // Drag and Drop 
 
-const list_items = document.querySelectorAll('.item');
-const lists = document.querySelectorAll('.box-items');
+const draggables = document.querySelectorAll('.item')
+const containers = document.querySelectorAll('.box-items')
 
-let draggedItem = null;
+draggables.forEach(draggable => {
+  draggable.addEventListener('dragstart', () => {
+    draggable.classList.add('dragging')
+  })
 
-for (let i = 0; i < list_items.length; i++) {
-	const item = list_items[i];
+  draggable.addEventListener('dragend', () => {
+    draggable.classList.remove('dragging')
+  })
+})
 
-	item.addEventListener('dragstart', function () {
-		draggedItem = item;
-		setTimeout(function () {
-			item.style.display = 'none';
-		}, 0)
-	});
+containers.forEach(container => {
+  container.addEventListener('dragover', e => {
+    e.preventDefault()
+    const afterElement = getDragAfterElement(container, e.clientY)
+    const draggable = document.querySelector('.dragging')
+    if (afterElement == null) {
+      container.appendChild(draggable)
+    } else {
+      container.insertBefore(draggable, afterElement)
+    }
+  })
+})
 
-	item.addEventListener('dragend', function () {
-		setTimeout(function () {
-			draggedItem.style.display = 'block';
-			draggedItem = null;
-		}, 0);
-	})
+function getDragAfterElement(container, y) {
+  const draggableElements = [...container.querySelectorAll('.item:not(.dragging)')]
 
-	for (let j = 0; j < lists.length; j ++) {
-		const list = lists[j];
-
-		list.addEventListener('dragover', function (e) {
-			e.preventDefault();
-		});
-		
-		list.addEventListener('dragenter', function (e) {
-			e.preventDefault();
-			this.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
-		});
-
-		list.addEventListener('dragleave', function (e) {
-			this.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
-		});
-
-		list.addEventListener('drop', function (e) {
-			console.log('drop');
-			this.append(draggedItem);
-			this.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
-		});
-	}
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect()
+    const offset = y - box.top - box.height / 2
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child }
+    } else {
+      return closest
+    }
+  }, { offset: Number.NEGATIVE_INFINITY }).element
 }
