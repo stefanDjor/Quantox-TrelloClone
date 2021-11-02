@@ -200,3 +200,31 @@ html, body {
 .item.dragging {
     opacity: .5;
   }
+
+
+  /* Mobile */
+  @media only screen and (max-width: 650px) {
+   .create-btn{
+       padding: 6px 10px;
+   }
+   .black-logo {
+       width: 150px;
+       height: 50px;
+   }
+   .header {
+        padding: 10px;
+   }
+   .nav-right {
+       gap: 10px;
+   }
+   .info-img {
+       width: 25px;
+       height: 25px;
+   }
+  }
+  @media only screen and (max-width: 350px) {
+    .black-logo {
+        width: 140px;
+        height: 40px;
+    }
+   }
