@@ -1,6 +1,18 @@
 const addItem = document.querySelector('.icon');
 const textPlace = document.querySelector('.input-area');
 const saveBtn = document.querySelector('.save-btn');
+const infoBtn = document.querySelector(".nav-info");
+const infoPhoto = document.querySelector(".info-photo")
+
+// Info open/close
+infoBtn.addEventListener("click", event => {
+    if (infoPhoto.style.display === "none") {
+        infoPhoto.style.display = "flex";
+    } else {
+        infoPhoto.style.display = "none";
+    }
+});
+
 
 addItem.addEventListener('click',() =>{
     textPlace.style.display = "block";

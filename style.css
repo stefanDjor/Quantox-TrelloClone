@@ -169,3 +169,25 @@ html, body {
     border: none;
     display: none;
 }
+/* Info modal */
+.info-photo {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    width: 20%;
+    height: 33vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 30px;
+    margin-top: 80px;
+    font-size: 14px;
+    opacity: 99%;
+    border-radius: 8px;
+    display: none;
+}
