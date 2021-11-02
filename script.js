@@ -26,3 +26,9 @@ saveBtn.addEventListener('click', () =>{
     addItem.style.visibility = "visible";
 })
 
+// function save1() {
+//     var btnSavefirst = document.getElementById('input-save-blog').value === " ";
+    
+// }
+
+// Drag and Drop 

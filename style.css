@@ -65,9 +65,12 @@ html, body {
     display: flex;
     color: white;
     width: 100%;
-    justify-content: space-around;
     padding-top: 40px;
     align-items: flex-start;
+    overflow: auto;
+    height: calc(100vh - 85px);
+    padding:30px;
+    gap: 30px;
 }
 /* Card je za svaku odvojedno  */
 .card {
@@ -81,6 +84,7 @@ html, body {
     padding:10px;
     padding-bottom: 20px;
     border-radius: 10px;
+    flex: 0 0 300px;
 }
 .box-title {
     background-color: orange;
@@ -140,6 +144,7 @@ html, body {
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
+    padding-top: 40px;
 }
 .save-btn{
     border: none;
