@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon/trello-fav.png" type="image/x-icon">
+    <script src="script.js" defer></script>
     <title>Trello</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
                     <img class="info-img" src="icon/info-black.png" alt="info">
                 </div>
                 <div class="nac-create">
-                    <button class="create-btn" type="">Create</button>
+                    <button id="createbtn" class="create-btn" type="button">Create</button>
                 </div>
             </div>
         </div>
@@ -36,12 +37,12 @@
                 </div>
                 <div class="box-items">
                     <div class="item" draggable="true">
-                        <p class="item-text" ondblclick="myDbl()">
+                        <p contenteditable="true" class="item-text" ondblclick="myDbl()">
                             Release the course
                         </p>
                     </div>
                     <div class="item" draggable="true">
-                        <p class="item-text" ondblclick="myDbl()">
+                        <p contenteditable="true" class="item-text" ondblclick="myDbl()">
                             Sit back and relax
                         </p>
                     </div>
@@ -61,18 +62,18 @@
             <!-- Druga -->
             <div class="card in-progres-card">
                     <div class="box-title second">
-                        <p class="backlog" id="title2">
+                        <p  class="backlog" id="title2">
                             In Progress
                         </p>
                     </div>
                     <div class="box-items">
                         <div class="item" draggable="true">
-                            <p class="item-text">
+                            <p contenteditable="true" class="item-text">
                                 Work on projects
                             </p>
                         </div>
                         <div class="item" draggable="true">
-                            <p class="item-text">
+                            <p contenteditable="true" class="item-text">
                                 Listen to music
                             </p>
                         </div>
@@ -92,18 +93,18 @@
             <!-- Treca -->
             <div class="card complit-card">
                 <div class="box-title three">
-                    <p class="backlog" id="title3">
+                    <p  class="backlog" id="title3">
                         Complete
                     </p>
                 </div>
                 <div class="box-items">
                     <div class="item" draggable="true">
-                        <p class="item-text">
+                        <p contenteditable="true" class="item-text">
                             Being cool
                         </p>
                     </div>
                     <div class="item" draggable="true">
-                        <p class="item-text">
+                        <p contenteditable="true" class="item-text">
                             Getting stuff done
                         </p>
                     </div>
@@ -129,7 +130,7 @@
                 </div>
                 <div class="box-items">
                     <div class="item" draggable="true">
-                        <p class="item-text">
+                        <p contenteditable="true" class="item-text">
                             Being uncool
                         </p>
                     </div>
@@ -162,12 +163,12 @@
             </div>
 
             <div class="enter-new-name">
-                <p>Enter new name</p>
+                <p class="modal-title-text">Enter new name</p>
                 <img class="pencil" src="./icon/pencil-icon.png">
             </div>
 
             <div class="input-place">
-                <input id="test" type="text">
+                <input class="input-mobile-text" id="test" type="text">
             </div>
             
             <button class="save-new-name" id="new-name">Save</button>

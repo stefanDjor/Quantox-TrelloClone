@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
 *{
     box-sizing: border-box;
+    outline: none;
 }
 html, body {
     margin: 0;
@@ -104,7 +105,7 @@ html, body {
     align-items: center;
     gap: 15px;
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
 }
 .item{
     background-color: black;
@@ -132,6 +133,9 @@ html, body {
 }
 .three{
     background-color: darkseagreen;
+}
+.new-color {
+    background-color: green;
 }
 .icon-save{
     display: flex;
@@ -227,6 +231,24 @@ html, body {
         width: 140px;
         height: 40px;
     }
+    .input-mobile-text {
+        min-width: 155px;
+    }
+    .save-new-name {
+        width: 100%;
+        padding: 10px;
+        border: none;
+    }
+    .modal-title-text{
+        width: 100%;
+    }
+    .enter-new-name {
+        display: flex;
+        flex-direction: column;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+    }
    }
 
 
@@ -276,7 +298,7 @@ html, body {
     height: 16px;
 }
 
-input {
+input{
     width: 100%;
     min-width: 200px;
     min-height: 50px;
@@ -293,5 +315,10 @@ input {
     background-color: #3cb3ab;
     border-radius: 8px;
     font-weight: 700;
+    border: none;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
+.new-card {
+    width: 400px;
+}
