@@ -30,18 +30,18 @@
             <!-- Prva -->
             <div class="card backlog-card">
                 <div class="box-title first">
-                    <p class="backlog">
+                    <p class="backlog" id="title1">
                         Backlog
                     </p>
                 </div>
                 <div class="box-items">
                     <div class="item" draggable="true">
-                        <p class="item-text">
+                        <p class="item-text" ondblclick="myDbl()">
                             Release the course
                         </p>
                     </div>
                     <div class="item" draggable="true">
-                        <p class="item-text">
+                        <p class="item-text" ondblclick="myDbl()">
                             Sit back and relax
                         </p>
                     </div>
@@ -61,7 +61,7 @@
             <!-- Druga -->
             <div class="card in-progres-card">
                     <div class="box-title second">
-                        <p class="backlog">
+                        <p class="backlog" id="title2">
                             In Progress
                         </p>
                     </div>
@@ -92,7 +92,7 @@
             <!-- Treca -->
             <div class="card complit-card">
                 <div class="box-title three">
-                    <p class="complete">
+                    <p class="backlog" id="title3">
                         Complete
                     </p>
                 </div>
@@ -122,8 +122,8 @@
             </div>
             <!-- Cetvrta -->
             <div class="card on-hold-card">
-                <div class="box-title foure">
-                    <p class="complete">
+                <div class="box-title four">
+                    <p class="backlog" id="title4">
                         On Hold
                     </p>
                 </div>
@@ -149,10 +149,32 @@
         </div>
     </div>
 
+    <!--  info photo  -->
     <div class="info-photo">
         <img src="img/info-photo.png" alt="info-photo">
         <p>For all questions regarding this website You can ask Stefan and Oliver.</p>
     </div>
+
+    <!--  item modal  -->
+    <div class="item-modal" id="modal">
+        <div class="main-popup">
+            <div class="trello"><img src="./icon/Trello-logo.png" alt="Trello">
+            </div>
+
+            <div class="enter-new-name">
+                <p>Enter new name</p>
+                <img class="pencil" src="./icon/pencil-icon.png">
+            </div>
+
+            <div class="input-place">
+                <input id="test" type="text">
+            </div>
+            
+            <button class="save-new-name" id="new-name">Save</button>
+        </div>
+      </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
