@@ -172,8 +172,8 @@ function AddNew(){
                     </p>
                 </div>
                 <div class="box-items">
-                    <div class="item" draggable="true">
-                        <p contenteditable="true" class="item-text" ondblclick="myDbl()">
+                  <div ondblclick="this.contentEditable=true;" onblur="this.contentEditable=false;" contenteditable="false" class="item" draggable="true">
+                        <p class="item-text">
                             New item
                         </p>
                     </div>
