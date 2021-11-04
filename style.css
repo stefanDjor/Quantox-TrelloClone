@@ -105,7 +105,7 @@ html, body {
     align-items: center;
     gap: 15px;
     width: 100%;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 .item{
     background-color: black;
@@ -169,7 +169,7 @@ html, body {
     background-color: rgb(62, 62, 204);
 }
 .text-area{
-    width: 100%;
+    width: 90%;
 }
 .input-area{
     width: 100%;

@@ -222,3 +222,34 @@ function AddNew(){
     })
   })
 }
+
+
+// ADD Items
+saveBtn.addEventListener('click', newItem);
+
+function newItem () {
+  const containers = this.parentElement.parentElement.parentElement.childNodes[3];
+  if (textPlace.value != ''){
+      const newItem = document.createElement('div');
+      newItem.classList.add('item');
+      newItem.setAttribute('draggable', "true");
+      newItem.innerHTML = textPlace.value;
+      containers.appendChild(newItem);
+      textPlace.value = '';
+
+      newItem.addEventListener('dragstart', () => {
+        newItem.classList.add('dragging')
+      });
+      
+        newItem.addEventListener('dragend', () => {
+          newItem.classList.remove('dragging')
+        });
+
+  }
+  saveBtn.style.display = "none";
+  
+  
+  
+
+  
+}
